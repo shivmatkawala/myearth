@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Route, Router, TitleStrategy } from '@angular/router';
 import { floor } from 'mathjs';
 
 @Component({
@@ -9,12 +9,30 @@ import { floor } from 'mathjs';
 })
 export class SignupComponent {
 
+  user ={
+    firsname:'',
+    lastname:'',
+    email:'',
+    password:''
+  }
+
   constructor(private router:Router){}
 
-  onSubmit(form:any){
-    console.log(form.value)
-    alert('Form Submitted Successfully..!')
-    form.reset()
-    this.router.navigateByUrl('home')
+  onSubmit(){
+    if (this.isFormValid()){
+      alert("Form Submitted Successfully..")
+      this.router.navigateByUrl('home')
+    }else{
+      alert("Form is Invalid..!")
+    }
+  }
+
+  isFormValid(): boolean{
+    return(
+      this.user.firsname.trim() !== '' &&
+      this.user.lastname.trim() !== '' &&
+      this.user.email.trim() !== '' &&
+      this.user.password.trim() !== ''
+    )
   }
 }

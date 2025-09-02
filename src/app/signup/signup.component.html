@@ -1,20 +1,20 @@
 <div class="container">
-    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
         <div>
             <label for="firstname">Firstname:</label>
-            <input type="text" name="firstname" id="firstname" ngModel required>
+            <input type="text" name="firstname" id="firstname" [(ngModel)]="user.firsname" required>
         </div>
         <div>
             <label for="lastname">Lastname:</label>
-            <input type="text" name="lastname" id="lastname" ngModel required>
+            <input type="text" name="lastname" id="lastname" [(ngModel)]="user.lastname" required>
         </div>
         <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" ngModel required>
+            <input type="email" name="email" id="email" [(ngModel)]="user.email" required>
         </div>
         <div>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" ngModel required>
+            <input type="password" name="password" id="password" [(ngModel)]="user.password" required>
         </div>
         <button type="submit">SUBMIT</button>
     </form>
