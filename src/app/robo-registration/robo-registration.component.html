@@ -1,0 +1,34 @@
+<div class="card">
+    <form #roboForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="roboid">Robot Id:</label>
+            <input type="text" name="roboid" id="roboid" [(ngModel)]="myRobot.roboid" required>
+        </div>
+        <div>
+            <label for="roboname">Robot Name:</label>
+            <input type="text" name="roboname" id="roboname" [(ngModel)]="myRobot.roboname" required>
+        </div>
+        <div>
+            <label for="roboprice">Robot Price:</label>
+            <input type="number" name="roboprice" id="roboprice" [(ngModel)]="myRobot.roboprice" required>
+        </div>
+        <div>
+            <label for="manufacturer">Manufacturer:</label>
+            <input type="text" name="manufacturer" id="manufacturer" [(ngModel)]="myRobot.manufacturer" required>
+        </div>
+        <div>
+            <label for="origin">Origin:</label>
+            <!-- <input type="text" name="origin" id="origin" [(ngModel)]="myRobot.origin" required> -->
+            <select name="origin" id="origin" [(ngModel)]="myRobot.origin" required>
+                <option value="">--Please choose an Origin--</option>
+                <option *ngFor="let country of Origin" value="[myRobot.origin]">{{country}}</option>
+            </select>
+        </div>
+        <div>
+            <label for="purpose">Purpose:</label>
+            <!-- <input type="text" name="purpose" id="purpose" [(ngModel)]="myRobot.purpose" required> -->
+            <textarea name="purpose" id="purpose" [(ngModel)]="myRobot.purpose" required></textarea>
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>

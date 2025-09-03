@@ -9,13 +9,15 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FirecrackerComponent } from './firecracker/firecracker.component';
 import { CommonModule } from '@angular/common';
+import { RoboRegistrationComponent } from './robo-registration/robo-registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     HomeComponent,
-    FirecrackerComponent
+    FirecrackerComponent,
+    RoboRegistrationComponent
   ],
   imports: [
     BrowserModule,
