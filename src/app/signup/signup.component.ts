@@ -16,9 +16,13 @@ export class SignupComponent {
     password:''
   }
 
+  emailErrorVisible=false;
+  passwordErrorVisible= false;
   constructor(private router:Router){}
 
   onSubmit(){
+    this.emailErrorVisible = !this.isEmailValid(this.user.email)
+    this.passwordErrorVisible = !this.isPasswordValid(this.user.password)
     if (this.isFormValid()){
       alert("Form Submitted Successfully..")
       this.router.navigateByUrl('home')
@@ -27,12 +31,19 @@ export class SignupComponent {
     }
   }
 
+  isEmailValid(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(email.trim());
+  };
+
+  isPasswordValid(password: string): boolean {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password.trim());
+  }
   isFormValid(): boolean{
     return(
       this.user.firsname.trim() !== '' &&
-      this.user.lastname.trim() !== '' &&
-      this.user.email.trim() !== '' &&
-      this.user.password.trim() !== ''
+      this.user.lastname.trim() !== '' 
     )
   }
 }

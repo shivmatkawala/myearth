@@ -3,11 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { RoboRegistrationComponent } from './robo-registration/robo-registration.component';
+import { SigninComponent } from './signin/signin.component';
 
 const routes: Routes = [
   {path:'', component:SignupComponent, pathMatch:'full'},
+  {path:'signup', component:SignupComponent},
   {path:'home', component:HomeComponent},
-  {path:'myrobot', component:RoboRegistrationComponent}
+  {path:'myrobot', component:RoboRegistrationComponent},
+  {path:'signin', component:SigninComponent}
 ];
 
 @NgModule({

@@ -2,20 +2,44 @@
     <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
         <div>
             <label for="firstname">Firstname:</label>
-            <input type="text" name="firstname" id="firstname" [(ngModel)]="user.firsname" required>
+            <input type="text" name="firstname" id="firstname" [(ngModel)]="user.firsname" required #firstnameModel="ngModel">
+            <div *ngIf="firstnameModel.touched && firstnameModel.errors?.['required']" class="error">
+                firstname is required
+            </div>
         </div>
         <div>
             <label for="lastname">Lastname:</label>
-            <input type="text" name="lastname" id="lastname" [(ngModel)]="user.lastname" required>
+            <input type="text" name="lastname" id="lastname" [(ngModel)]="user.lastname" required  #lastnnameModel="ngModel">
+            <div *ngIf="lastnnameModel.touched && lastnnameModel.errors?.['required']" class="error">
+                lastname is required
+            </div>
         </div>
         <div>
             <label for="email">Email:</label>
-            <input type="email" name="email" id="email" [(ngModel)]="user.email" required>
+            <input type="email" name="email" id="email" [(ngModel)]="user.email" #emailModel="ngModel" required />
+
+            <!-- Required error -->
+            <div *ngIf="emailModel.touched && emailModel.errors?.['required']" class="error">
+                Email is required.
+            </div>
+
+            <!-- Invalid email format -->
+            <div *ngIf="emailModel.touched && emailModel.errors?.['email']" class="error">
+                Please enter a valid email address.
+            </div>
         </div>
+
         <div>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" [(ngModel)]="user.password" required>
+            <input type="password" name="password" id="password" [(ngModel)]="user.password" required #passwordModel="ngModel" >
+            <div *ngIf="passwordModel.touched && passwordModel.errors?.['required']" class="error">
+                Password is required
+            </div>
         </div>
+        <div>
+            <a routerLink="signin" style="text-decoration: none;">already have an account</a>
+        </div>
+        <hr>
         <button type="submit">SUBMIT</button>
     </form>
 </div>

@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { FirecrackerComponent } from './firecracker/firecracker.component';
 import { CommonModule } from '@angular/common';
 import { RoboRegistrationComponent } from './robo-registration/robo-registration.component';
+import { SigninComponent } from './signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RoboRegistrationComponent } from './robo-registration/robo-registration
     SignupComponent,
     HomeComponent,
     FirecrackerComponent,
-    RoboRegistrationComponent
+    RoboRegistrationComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

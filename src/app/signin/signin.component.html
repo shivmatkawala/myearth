@@ -1,0 +1,17 @@
+<div class="container">
+    <form #signinForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" [(ngModel)]="credentials.email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" [(ngModel)]="credentials.password" required>
+        </div>
+        <div>
+            <a routerLink=""  style="text-decoration: none;">don't have an account</a>
+        </div>
+        <hr>
+        <button type="submit">SUBMIT</button>
+    </form>
+</div>
