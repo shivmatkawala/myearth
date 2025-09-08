@@ -1,0 +1,31 @@
+<form [formGroup]="form1" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="animalName">Animal Name: </label>
+        <input type="text" name="animalName" id="animalName" formControlName="animalName">
+        <div *ngIf="form1.get('animalName')?.invalid && form1.get('animalName')?.touched" class="error">
+            Animal Name is Required.
+        </div>
+    </div>
+    <div>
+        <label for="animalColor">Animal Color: </label>
+        <input type="text" name="animalColor" id="animalColor" formControlName="animalColor">
+        <div *ngIf="form1.get('animalColor')?.invalid && form1.get('animalColor')?.touched" class="error">
+            Animal Color is Required.
+        </div>
+    </div>
+    <div>
+        <label for="animalAge">Animal Age: </label>
+        <input type="number" name="animalAge" id="animalAge" formControlName="animalAge">
+        <div *ngIf="form1.get('animalAge')?.invalid && form1.get('animalAge')?.touched" class="error">
+            Animal Age is Required.
+        </div>
+    </div>
+    <div>
+        <label for="animalRegion">Animal Region: </label>
+        <input type="text" name="animalRegion" id="animalRegion" formControlName="animalRegion">
+        <div *ngIf="form1.get('animalRegion')?.invalid && form1.get('animalRegion')?.touched" class="error">
+            Animal Region is Required.
+        </div>
+    </div>
+    <button  type="submit">SUBMIT</button>
+</form>
