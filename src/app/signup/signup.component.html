@@ -2,7 +2,7 @@
     <form #signupForm="ngForm" (ngSubmit)="onSubmit()">
         <div>
             <label for="firstname">Firstname:</label>
-            <input type="text" name="firstname" id="firstname" [(ngModel)]="user.firsname" required #firstnameModel="ngModel">
+            <input type="text" name="firstname" id="firstname" [(ngModel)]="user.firstname" required #firstnameModel="ngModel">
             <div *ngIf="firstnameModel.touched && firstnameModel.errors?.['required']" class="error">
                 firstname is required
             </div>

@@ -201,3 +201,14 @@ footer a:hover {
   background-color: #FFFFFF;
   transform: scale(1.2);
 }
+
+.rotate:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+
+/* .robo-img:hover {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
+} */
