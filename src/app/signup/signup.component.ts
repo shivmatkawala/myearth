@@ -21,7 +21,7 @@ export class SignupComponent {
   emailErrorVisible = false;
   passwordErrorVisible = false;
 
-  constructor(private router: Router, private signupService: SignupService) {}
+  constructor(private router: Router, private signupService: SignupService) { }
 
   onSubmit() {
     this.emailErrorVisible = !this.isEmailValid(this.user.email);
@@ -30,9 +30,20 @@ export class SignupComponent {
     if (this.isFormValid()) {
       // ✅ add user details to list
       // this.users.push({ ...this.user }); 
-      this.signupService.addUser({ ...this.user }); 
+      // this.signupService.addUser({ ...this.user }); 
+      this.signupService.addUser({ ...this.user }).subscribe({
+        next: (res) => {
+          alert("Form Submitted Successfully!");
+          this.router.navigateByUrl('home');
+        },
+        error: (err) => {
+          alert("Error submitting form!");
+          console.error(err);
+        }
+      });
 
-      alert("Form Submitted Successfully!");
+
+      // alert("Form Submitted Successfully!");
       console.log("Registered Users:", this.signupService.getUsers());  // for debugging
 
       // Clear form

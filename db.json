@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "acda",
+      "firstname": "harikis",
+      "lastname": "reddy",
+      "email": "reddy@gmail.com",
+      "password": "Hari@123"
+    },
+    {
+      "id": "b7c8",
+      "firstname": "ramakant",
+      "lastname": "Desai",
+      "email": "ramad@gmail.com",
+      "password": "Rama@123"
+    },
+    {
+      "id": "7015",
+      "firstname": "sushila",
+      "lastname": "devarkonda",
+      "email": "sushid@gmail.com",
+      "password": "Shushi@123"
+    },
+    {
+      "id": "af4d",
+      "firstname": "rajani",
+      "lastname": "thalaiva",
+      "email": "rajanit@yahoo.com",
+      "password": "Rajni@123"
+    }
+  ],
+  "animals": [
+    {
+      "id": "673a",
+      "animalName": "Elephant",
+      "animalColor": "Balck",
+      "animalAge": 20,
+      "animalRegion": "Asian"
+    },
+    {
+      "id": "f3be",
+      "animalName": "peacock",
+      "animalColor": "green & blue",
+      "animalAge": 10,
+      "animalRegion": "Europe"
+    }
+  ]
+}

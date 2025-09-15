@@ -21,10 +21,16 @@ export class Form1Component {
 
   onSubmit(){
     if(this.isFormValid()){
-      this.form1Service.addAnimal({...this.form1.value})
-      alert("Form Submitted Successfully..!")
-      console.log(this.form1Service.getAnimal())
-      this.form1.reset()
+      this.form1Service.addAnimal({...this.form1.value}).subscribe({
+        next: (res) =>{
+          alert("Form Submitted Successfully..!")
+          this.form1.reset()
+        },
+        error: (err) =>{
+          alert("Invalid Form..!")
+        }
+      })
+    
     }else{
       alert('Invalid Form.!')
     }

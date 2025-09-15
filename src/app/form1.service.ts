@@ -1,18 +1,23 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Form1Service {
 
-  animals: any[] = []
-  constructor() { }
+  // animals: any[] = []
+  constructor( private http: HttpClient) { }
 
-  addAnimal(form:any){
-    this.animals.push(form)
+  baseUrl = 'http://localhost:3000/animals'
+
+  addAnimal(form:any): Observable<any>{
+    // this.animals.push(form)
+    return this.http.post(this.baseUrl, form)
   }
 
   getAnimal(){
-    return this.animals
+    // return this.animals
   }
 }
