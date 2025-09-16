@@ -27,22 +27,36 @@
       "lastname": "thalaiva",
       "email": "rajanit@yahoo.com",
       "password": "Rajni@123"
+    },
+    {
+      "id": "c66c",
+      "firstname": "sulochana",
+      "lastname": "sakharam",
+      "email": "sulosakha@gmail.com",
+      "password": "Sulo@123"
     }
   ],
   "animals": [
     {
-      "id": "673a",
-      "animalName": "Elephant",
-      "animalColor": "Balck",
-      "animalAge": 20,
-      "animalRegion": "Asian"
+      "id": "17a2",
+      "animalName": "Dogggie",
+      "animalColor": "redish",
+      "animalAge": 5,
+      "animalRegion": "Telangana"
     },
     {
-      "id": "f3be",
-      "animalName": "peacock",
-      "animalColor": "green & blue",
-      "animalAge": 10,
-      "animalRegion": "Europe"
+      "id": "1184",
+      "animalName": "Monkey",
+      "animalColor": "Brown",
+      "animalAge": 7,
+      "animalRegion": "Karnataka"
+    },
+    {
+      "id": "286a",
+      "animalName": "Girrafe",
+      "animalColor": "white",
+      "animalAge": 30,
+      "animalRegion": "Rajsthan"
     }
   ]
 }

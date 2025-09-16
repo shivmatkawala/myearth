@@ -1,1 +1,26 @@
-<p>form3 works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Animal Name</th>
+            <th>Animal Color</th>
+            <th>Animal Age</th>
+            <th>Animal Region</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let animal of data">
+            <td>{{animal.id}}</td>
+            <td>{{animal.animalName}}</td>
+            <td>{{animal.animalColor}}</td>
+            <td>{{animal.animalAge}}</td>
+            <td>{{animal.animalRegion}}</td>
+            <td>
+                <button type="button"  (click)="deleteAnimal(animal.id)">DELETE</button>
+                &nbsp;
+                <button type="button">UPDATE</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
