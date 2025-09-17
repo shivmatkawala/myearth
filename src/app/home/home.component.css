@@ -194,6 +194,7 @@ footer a:hover {
   font-weight: 500;
   border-radius: 1rem;
   transition: transform 0.2s ease-in-out;
+  border: none;
 }
 
 .templates button:hover{
